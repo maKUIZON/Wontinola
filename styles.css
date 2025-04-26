@@ -6,6 +6,7 @@
   
   body {
     overflow-x: hidden;
+    font-family: 'Poppins';
   }
   
   header {
@@ -35,7 +36,7 @@
   .sdfs {
     position: relative;
     z-index: 2;
-    color: white;
+    color: white; 
   }
   
   .bg-video {
@@ -122,7 +123,6 @@
   .div-1 {
     width: 100%;
     height: 500px;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -172,5 +172,29 @@
     .burger {
       display: block;
     }
+
+    .div-1{
+        gap: 20px 70px;
+    }
+    .div-1 h1{
+        color:white;
+        font-size: 100px;
+      }
+      .div-1 h6{
+        color:white;
+        font-size: 25px;
+      }
+      .div-1 button{
+        color:rgb(255, 255, 255);
+        font-size: 2vw;
+        width:150px;
+        height:60px;
+        border-radius: 35px;
+        border-width: 15px;
+        border-color: rgb(120, 14, 14);
+        background-color: black;
+    
+      }
+      
   }
   
