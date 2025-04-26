@@ -7,13 +7,12 @@
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css" />
   <title>Wontinola</title>
-
 </head>
 <body>
   <header>
     <img src="picture/log.png" alt="Logo" class="logo" />
     <div class="nav-buttons">
-      <button onclick="window.location.href='index.html'"style="text-decoration: underline;">Home</button>
+      <button onclick="window.location.href='index.html'" style="text-decoration: underline;">Home</button>
       <button onclick="window.location.href='about.html'">About</button>
       <button onclick="window.location.href='flavors.html'">Flavors</button>
     </div>
@@ -23,61 +22,57 @@
   <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
 
   <div id="sidePanel" class="side-panel">
-    <button onclick="window.location.href='index.html'"style="text-decoration: underline;">Home</button>
+    <button onclick="window.location.href='index.html'" style="text-decoration: underline;">Home</button>
     <button onclick="window.location.href='about.html'">About</button>
     <button onclick="window.location.href='flavors.html'">Flavors</button>
   </div>
 
   <div class="content">
     <div class="div-1" style="background-color: rgb(23, 2, 2);">
-        <video autoplay muted loop playsinline class="bg-video">
+        <video autoplay muted loop playsinline class="bg-video" onloadeddata="this.play()">
             <source src="picture/Wontinola.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
         
-          <div class="sdfs">
+        <div class="sdfs">
             <h1>Wontinola</h1>
-            <h6>KUNG SAAN PANALO KA!</h2>
+            <h6>KUNG SAAN PANALO KA!</h6>
             <button class="gettarted">Get Started</button>
-          </div>
+        </div>
     </div>
+
     <div class="div-1" style="background-color: rgb(23, 2, 2); background-image: url('picture/background.png');">
-        
-        
-          <div class="sdfs">
+        <div class="sdfs">
             <h1>Hello Welcome</h1>
-            <p>Discover Wontinola,  a unique fusion of <br>
+            <p>Discover Wontinola, a unique fusion of <br>
                 Chinese wontons and gingery <br>
                 goodness of Filipino tinola <br>
-                soup—comforting, savory, and 
-                <br>packed with cultural flavor. </p>
+                soup—comforting, savory, and <br> packed with cultural flavor.</p>
             <button>Order Now</button>
-          </div>
+        </div>
     </div>
   </div>
+
   <footer>
     <div class="button-grid">
-        <button class="logo-button-column"  onclick="copyNumber('09056053442')">
-          <img src="picture/phone.png" alt="Logo">
-          <span>09056053442</span>
-        </button>
-        <button class="logo-button-column" onclick="window.location.href='https\://www.instagram.com/wontinola.official'">
-          <img src="picture/ig.png" alt="Logo">
-          <span>https://www.instagram.com/wontinola.official</span>
-        </button>
-        <button class="logo-button-column"  onclick="window.location.href='https\://www.facebook.com/share/1EdebhKNjS'">
-          <img src="picture/fb.png" alt="Logo">
-          <span>https://www.facebook.com/share/1EdebhKNjS
-        </span>
-        </button>
-        <button class="logo-button-column" onclick="copyNumber('connectwithwontinola@gmail.com')">
-          <img src="picture/email.png" alt="Logo">
-          <span>connectwithwontinola@gmail.com</span>
-        </button>
-      </div>
-      
+      <button class="logo-button-column" onclick="copyNumber('09056053442')">
+        <img src="picture/phone.png" alt="Logo">
+        <span>09056053442</span>
+      </button>
+      <button class="logo-button-column" onclick="window.location.href='https://www.instagram.com/wontinola.official'">
+        <img src="picture/ig.png" alt="Logo">
+        <span>Instagram</span>
+      </button>
+      <button class="logo-button-column" onclick="window.location.href='https://www.facebook.com/share/1EdebhKNjS'">
+        <img src="picture/fb.png" alt="Logo">
+        <span>Facebook</span>
+      </button>
+      <button class="logo-button-column" onclick="copyNumber('connectwithwontinola@gmail.com')">
+        <img src="picture/email.png" alt="Logo">
+        <span>Email</span>
+      </button>
+    </div>
   </footer>
-    
 
   <script>
     function toggleMenu() {
@@ -102,12 +97,14 @@
       
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
+
     function copyNumber(ss) {
-        navigator.clipboard.writeText(ss).then(function() {
-            alert('Copied to clipboard!');
-        }, function(err) {
-            console.error('Could not copy text: ', err);
-    });}
+      navigator.clipboard.writeText(ss).then(function() {
+        console.log('Text copied: ' + ss);
+      }, function(err) {
+        console.error('Could not copy text: ', err);
+      });
+    }
   </script>
 </body>
 </html>
